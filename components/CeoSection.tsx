@@ -5,7 +5,7 @@ const CeoSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 lg:py-32 w-full px-4">
       <div className="container mx-auto px-4">
-        <AnimatedSection>
+        <AnimatedSection direction="up" delay={0.2} type="fade">
           <div className="max-w-full md:max-w-4xl mx-auto glass-morphism rounded-2xl p-6 md:p-12 shadow-2xl shadow-cyan-500/10">
             <div className="flex flex-col items-center gap-6 md:gap-12">
               <div className="ceo-image-wrapper">

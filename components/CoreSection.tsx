@@ -19,7 +19,7 @@ const EnergySphere: React.FC = () => (
 const CoreSection: React.FC = () => {
   return (
     <section className="py-12 md:py-20 lg:py-40 relative flex flex-col items-center justify-center text-center w-full px-4">
-        <AnimatedSection className="w-full">
+        <AnimatedSection className="w-full" direction="up" delay={0.2} type="zoom">
             <div className="flex justify-center mb-8 md:mb-12">
                 <EnergySphere />
             </div>
