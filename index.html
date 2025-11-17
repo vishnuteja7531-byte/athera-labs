@@ -455,6 +455,58 @@
         0% { transform: translateY(-40px); }
         100% { transform: translateY(40px); }
       }
+      
+      /* Voice Intro Styles */
+      .intro-overlay {
+        position: fixed;
+        inset: 0;
+        background: black;
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .intro-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 25px rgba(15,230,255,0.4);
+      }
+      
+      .intro-title {
+        font-size: 2rem;
+        color: #0FE6FF;
+        margin-bottom: 0.25rem;
+      }
+      
+      .intro-sub {
+        font-size: 1rem;
+        color: #88cfff;
+        margin-bottom: 1.5rem;
+      }
+      
+      .intro-buttons {
+        display: flex;
+        gap: 1.2rem;
+      }
+      
+      .intro-btn {
+        padding: 0.6rem 1.2rem;
+        background: rgba(0,255,255,0.16);
+        border: 1px solid rgba(0,255,255,0.3);
+        color: #0FE6FF;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.25s ease;
+      }
+      
+      .intro-btn:hover {
+        box-shadow: 0 0 20px #0FE6FF;
+      }
     </style>
   <link rel="stylesheet" href="/index.css">
 </head>

@@ -15,6 +15,7 @@ import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import IntroSequence from './IntroSequence';
 import FloatingParticles from './FloatingParticles';
+import VoiceIntro from './VoiceIntro';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -94,7 +95,8 @@ const ParticleBackground: React.FC = () => {
 };
 
 const DesktopLayout: React.FC = () => {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showCinematicIntro, setShowCinematicIntro] = useState(true);
+  const [showVoiceIntro, setShowVoiceIntro] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState('default');
   
@@ -125,8 +127,27 @@ const DesktopLayout: React.FC = () => {
     };
   }, []);
   
-  if (showIntro) {
-    return <IntroSequence onComplete={() => setShowIntro(false)} />;
+  // Show voice intro after cinematic intro completes, but only on desktop
+  useEffect(() => {
+    if (!showCinematicIntro) {
+      // Check if we're on desktop
+      if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+        // Add a small delay before showing voice intro
+        const timer = setTimeout(() => {
+          setShowVoiceIntro(true);
+        }, 500);
+        
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [showCinematicIntro]);
+  
+  if (showCinematicIntro) {
+    return <IntroSequence onComplete={() => setShowCinematicIntro(false)} />;
+  }
+  
+  if (showVoiceIntro) {
+    return <VoiceIntro onFinish={() => setShowVoiceIntro(false)} />;
   }
   
   return (
