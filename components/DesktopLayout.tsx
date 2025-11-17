@@ -16,6 +16,7 @@ import DownloadAppSection from './DownloadAppSection';
 import ContactSection from './ContactSection';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
+import IntroSequence from './IntroSequence';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -95,6 +96,7 @@ const ParticleBackground: React.FC = () => {
 };
 
 const DesktopLayout: React.FC = () => {
+  const [showIntro, setShowIntro] = useState(true);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState('default');
   
@@ -124,6 +126,10 @@ const DesktopLayout: React.FC = () => {
       document.removeEventListener('mouseout', handleMouseOut);
     };
   }, []);
+  
+  if (showIntro) {
+    return <IntroSequence onComplete={() => setShowIntro(false)} />;
+  }
   
   return (
     <div className="scroll-container bg-black text-white w-full relative">
