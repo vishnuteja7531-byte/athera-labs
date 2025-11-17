@@ -105,70 +105,7 @@ const DesktopOnlyWrapper: React.FC = () => {
         </div>
       </section>
 
-      {/* Decision Panel */}
-      <section className="py-12 md:py-20 w-full px-4">
-        <div className="container mx-auto">
-          <h2 className="font-orbitron text-2xl md:text-4xl font-bold text-glow mb-8 md:mb-12 text-center">
-            Decision Support
-          </h2>
-          <div className="flex justify-center">
-            <div className="bg-black/40 border border-cyan-500/30 rounded-xl p-6 w-full max-w-md">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <h3 className="text-cyan-400 font-bold text-xl">Revenue Rescue — ACME Deal</h3>
-                  <p className="text-gray-400">Create invoice draft, update CRM, schedule demo, alert legal.</p>
-                </div>
-                <span className="text-cyan-400 font-bold">Idle</span>
-              </div>
-              
-              <div className="flex justify-center mb-6">
-                <div className="relative w-32 h-32">
-                  <svg viewBox="0 0 120 120" className="w-full h-full">
-                    <circle cx="60" cy="60" r="50" fill="none" stroke="#0a1a2a" strokeWidth="8" />
-                    <circle 
-                      cx="60" 
-                      cy="60" 
-                      r="50" 
-                      fill="none" 
-                      stroke="url(#gradient)" 
-                      strokeWidth="8" 
-                      strokeLinecap="round"
-                      strokeDasharray="220"
-                      strokeDashoffset="50"
-                      transform="rotate(-90 60 60)"
-                    />
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#0FE6FF" />
-                        <stop offset="100%" stopColor="#6B5FFF" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-cyan-400 font-bold">25%</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <h4 className="text-cyan-400 font-bold mb-2">Rationale</h4>
-                <p className="text-gray-300">
-                  Based on analysis of the ACME deal, this workflow is recommended to maximize revenue recovery while maintaining compliance.
-                </p>
-              </div>
-              
-              <div className="flex gap-3">
-                <button className="flex-1 bg-cyan-500 text-black font-bold py-2 px-4 rounded-md hover:bg-cyan-400 transition-colors">
-                  Approve
-                </button>
-                <button className="flex-1 bg-red-500/20 border border-red-500/30 text-white py-2 px-4 rounded-md hover:bg-red-500/30 transition-colors">
-                  Reject
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };
