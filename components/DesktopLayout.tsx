@@ -25,6 +25,7 @@ import AtheraSuperGrid from './AtheraSuperGrid';
 import AtheraTransitions from './AtheraTransitions';
 import AtheraEmotionEngine from './AtheraEmotionEngine';
 import AtheraArrivalIntro from './AtheraArrivalIntro';
+import AtheraCinematicIntro from './AtheraCinematicIntro';
 
 import '../styles/3d-templates.css';
 import '../styles/preAthera.css';
@@ -35,6 +36,7 @@ import '../styles/superGrid.css';
 import '../styles/transitions.css';
 import '../styles/emotionEngine.css';
 import '../styles/arrivalIntro.css';
+import '../styles/cinematicIntro.css';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -162,7 +164,7 @@ const DesktopLayout: React.FC = () => {
   }, [showCinematicIntro]);
   
   if (showCinematicIntro) {
-    return <IntroSequence onComplete={() => setShowCinematicIntro(false)} />;
+    return <AtheraCinematicIntro onComplete={() => setShowCinematicIntro(false)} />;
   }
   
   if (showVoiceIntro) {
