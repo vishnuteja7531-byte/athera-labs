@@ -18,8 +18,17 @@ import FloatingParticles from './FloatingParticles';
 import VoiceIntro from './VoiceIntro';
 import DesktopOnlyWrapper from './DesktopOnlyWrapper';
 import PreAtheraShowcase from './PreAtheraShowcase';
+import AtheraQuantumCore from './AtheraQuantumCore';
+import AtheraRealm from './AtheraRealm';
+import AtheraAbilitiesCarousel from './AtheraAbilitiesCarousel';
+import AtheraSuperGrid from './AtheraSuperGrid';
+
 import '../styles/3d-templates.css';
 import '../styles/preAthera.css';
+import '../styles/quantumCore.css';
+import '../styles/realm.css';
+import '../styles/carousel.css';
+import '../styles/superGrid.css';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -176,6 +185,10 @@ const DesktopLayout: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <HeroSection />
+          <AtheraRealm />
+          <AtheraQuantumCore />
+          <AtheraAbilitiesCarousel />
+          <AtheraSuperGrid />
           <PreAtheraShowcase />
           <DesktopOnlyWrapper />
           <AboutSection />
