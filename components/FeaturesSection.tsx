@@ -36,7 +36,7 @@ const FeatureCard: React.FC<{ title: string; index: number }> = ({ title, index 
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 lg:py-32 w-full px-4">
+    <section id="features" className="py-12 md:py-20 lg:py-32 w-full px-4">
       <div className="container mx-auto px-4">
         <AnimatedSection direction="up" delay={0.2} type="fade">
           <h2 className="font-orbitron text-2xl md:text-5xl font-bold text-center text-glow mb-8 md:mb-16">

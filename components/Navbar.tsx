@@ -17,7 +17,6 @@ const Navbar: React.FC = () => {
     { name: 'Features', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Roadmap', href: '#roadmap' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -41,6 +40,14 @@ const Navbar: React.FC = () => {
                 {item.name}
               </a>
             ))}
+            <a 
+              href="https://www.instagram.com/athera.labs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+            >
+              Contact
+            </a>
             <button className="font-orbitron text-sm font-bold px-4 py-2 bg-[#0fe6ff] text-black rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:shadow-[0_0_15px_#0fe6ff]">
               Access Platform
             </button>
@@ -77,6 +84,15 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </a>
               ))}
+              <a 
+                href="https://www.instagram.com/athera.labs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </a>
               <button className="font-orbitron text-sm font-bold px-4 py-2 bg-[#0fe6ff] text-black rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:shadow-[0_0_15px_#0fe6ff] w-full mt-2">
                 Access Platform
               </button>
