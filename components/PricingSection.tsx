@@ -62,8 +62,8 @@ const PricingSection: React.FC = () => {
             />
             <PricingCard 
               tier="Enterprise"
-              price="Custom"
-              features={['Full AI Suite', 'API Access', 'Dedicated Support', 'Developer Tools', 'Team Management', 'SLA Guarantee']}
+              price="$20"
+              features={['Full AI Suite', 'Unlimited API Access', 'Dedicated Support', 'Developer Tools', 'Extended Team Management', 'SLA Guarantee']}
             />
           </div>
         </AnimatedSection>

@@ -9,7 +9,7 @@ import PricingSection from './PricingSection';
 import Footer from './Footer';
 import AtheraCore3D from './AtheraCore3D';
 import RoadmapSection from './RoadmapSection';
-import TestimonialsSection from './TestimonialsSection';
+import CoDevelopersSection from './CoDevelopersSection';
 import MissionVisionSection from './MissionVisionSection';
 import FounderSection from './FounderSection';
 import DownloadAppSection from './DownloadAppSection';
@@ -158,7 +158,7 @@ const DesktopLayout: React.FC = () => {
           <CoreSection />
           <PricingSection />
           <RoadmapSection />
-          <TestimonialsSection />
+          <CoDevelopersSection />
           <MissionVisionSection />
           <FounderSection />
           <DownloadAppSection />
