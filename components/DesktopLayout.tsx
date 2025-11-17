@@ -4,14 +4,11 @@ import AboutSection from './AboutSection';
 import FeaturesSection from './FeaturesSection';
 import CoreSection from './CoreSection';
 import CeoSection from './CeoSection';
-import TechnologySection from './TechnologySection';
 import PricingSection from './PricingSection';
 import Footer from './Footer';
 import AtheraCore3D from './AtheraCore3D';
 import RoadmapSection from './RoadmapSection';
 import CoDevelopersSection from './CoDevelopersSection';
-import MissionVisionSection from './MissionVisionSection';
-import FounderSection from './FounderSection';
 import DownloadAppSection from './DownloadAppSection';
 import ContactSection from './ContactSection';
 import Navbar from './Navbar';
@@ -159,10 +156,7 @@ const DesktopLayout: React.FC = () => {
           <PricingSection />
           <RoadmapSection />
           <CoDevelopersSection />
-          <MissionVisionSection />
-          <FounderSection />
           <DownloadAppSection />
-          <TechnologySection />
           <CeoSection />
           <ContactSection />
           <Footer />

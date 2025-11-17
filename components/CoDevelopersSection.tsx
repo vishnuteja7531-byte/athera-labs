@@ -7,6 +7,7 @@ interface Developer {
   name: string;
   role: string;
   description: string;
+  avatar: string;
 }
 
 const developers: Developer[] = [
@@ -14,23 +15,26 @@ const developers: Developer[] = [
     id: 1,
     name: "Draven Hale",
     role: "Frontend Engineer",
-    description: "Specializes in cinematic UI, neon interfaces, and high-performance rendering."
+    description: "Specializes in cinematic UI, neon interfaces, and high-performance rendering.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
     id: 2,
     name: "Nova Quinn",
     role: "AI Research Engineer",
-    description: "Builds reasoning modules, embeddings, and cognitive pipeline optimizations."
+    description: "Builds reasoning modules, embeddings, and cognitive pipeline optimizations.",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg"
   },
   {
     id: 3,
     name: "Kyro Vance",
     role: "Systems Architect",
-    description: "Designs high-availability backends, parallel compute engines, and scaling logic."
+    description: "Designs high-availability backends, parallel compute engines, and scaling logic.",
+    avatar: "https://randomuser.me/api/portraits/men/71.jpg"
   }
 ];
 
-const DeveloperCard: React.FC<Developer & { index: number }> = ({ name, role, description, index }) => {
+const DeveloperCard: React.FC<Developer & { index: number }> = ({ name, role, description, avatar, index }) => {
   return (
     <motion.div
       className="card-dev"
@@ -38,7 +42,7 @@ const DeveloperCard: React.FC<Developer & { index: number }> = ({ name, role, de
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
     >
-      <div className="avatar-dev"></div>
+      <img src={avatar} alt={name} className="dev-avatar" />
       <h3 className="font-orbitron text-xl font-bold text-cyan-300 mb-1">{name}</h3>
       <p className="text-cyan-400 text-sm mb-4">{role}</p>
       <p className="text-gray-300 text-sm leading-relaxed">"{description}"</p>
