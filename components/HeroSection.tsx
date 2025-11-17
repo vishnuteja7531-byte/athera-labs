@@ -91,11 +91,11 @@ const HeroSection: React.FC = () => {
           <AICore />
         </div>
         
-        <h1 className="font-orbitron text-3xl md:text-6xl lg:text-7xl font-bold text-glow tracking-widest uppercase">
+        <h1 className="font-orbitron text-[clamp(1.8rem,5vw,3rem)] font-bold text-glow tracking-widest uppercase">
           Athera AI
         </h1>
         <p className="coming-soon uppercase">COMING SOON</p>
-        <p className="mt-3 md:mt-4 text-base md:text-2xl text-gray-300 max-w-full md:max-w-4xl mx-auto font-light leading-relaxed silver-glow px-4 min-h-[3rem] md:min-h-[4rem]">
+        <p className="mt-3 md:mt-4 text-[clamp(1rem,3.5vw,1.4rem)] text-gray-300 max-w-full md:max-w-4xl mx-auto font-light leading-relaxed silver-glow px-4 min-h-[3rem] md:min-h-[4rem]">
           {text}
           <span className="ml-1 inline-block w-2 h-6 md:h-8 bg-cyan-400 align-middle animate-pulse"></span>
         </p>
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
           An advanced artificial intelligence engine built for students, developers, creators, and dreamers — combining intelligence, speed, precision, and futuristic design.
         </p>
 
-        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-4">
+        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-4 hero-buttons w-full">
           <button className="font-orbitron text-base md:text-lg font-bold px-6 md:px-8 py-3 bg-[#0fe6ff] text-black rounded-md transition-all duration-300 ease-in-out hover:bg-white hover:shadow-[0_0_20px_#0fe6ff] transform hover:scale-105 w-full sm:w-auto">
             Access Platform
           </button>

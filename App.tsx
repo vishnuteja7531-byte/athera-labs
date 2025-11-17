@@ -18,23 +18,39 @@ import ContactSection from './components/ContactSection';
 import Navbar from './components/Navbar';
 
 const ParticleBackground: React.FC = () => {
-    const particles = Array.from({ length: 50 });
+    const [isMobile, setIsMobile] = React.useState(false);
     
     useEffect(() => {
+        // Check if mobile device
+        const mobileCheck = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        
+        mobileCheck();
+        window.addEventListener('resize', mobileCheck);
+        
         const handleScroll = () => {
             const scrolled = window.scrollY;
-            const rate = scrolled * -0.5;
             const elements = document.querySelectorAll('.parallax-element');
             elements.forEach(element => {
                 const depth = element.getAttribute('data-depth') || 0;
-                const yPos = -(scrolled * (parseFloat(depth as string) || 0));
+                // Slower movement on mobile
+                const speed = isMobile ? 0.15 : parseFloat(depth as string) || 0.3;
+                const yPos = -(scrolled * speed);
                 (element as HTMLElement).style.transform = `translate3d(0, ${yPos}px, 0)`;
             });
         };
         
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', mobileCheck);
+        };
+    }, [isMobile]);
+    
+    // Reduce particle count on mobile
+    const particleCount = isMobile ? 20 : 50;
+    const particles = Array.from({ length: particleCount });
     
     return (
         <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">

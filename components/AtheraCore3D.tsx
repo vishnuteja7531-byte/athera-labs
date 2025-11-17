@@ -92,11 +92,10 @@ const AtheraCore3D: React.FC = () => {
           <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
             A revolutionary neural architecture inspired by human cognition. The Athera Core processes information through multi-layered reasoning, contextual awareness, and adaptive learning — delivering intelligence that thinks, evolves, and understands.
           </p>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center core-wrapper">
             <canvas 
               ref={canvasRef} 
-              className="w-full max-w-md md:max-w-2xl h-64 md:h-96 lg:h-[500px]"
-              style={{ maxHeight: '500px' }}
+              className="w-full h-full"
             />
           </div>
         </div>

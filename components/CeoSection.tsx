@@ -12,8 +12,8 @@ const CeoSection: React.FC = () => {
                 <img src="/assets/vishnu.jpeg" className="ceo-photo" alt="Vishnu Teja" />
               </div>
               <div className="text-center w-full">
-                <h3 className="font-orbitron text-2xl md:text-3xl font-bold text-glow">Vishnu Teja</h3>
-                <p className="text-cyan-300 text-base md:text-lg font-semibold mt-1">Founder & CEO, Athera AI (Age: 17)</p>
+                <h3 className="font-orbitron text-[clamp(1.2rem,4vw,1.8rem)] font-bold text-glow ceo-title">Vishnu Teja</h3>
+                <p className="text-cyan-300 text-[clamp(0.9rem,3vw,1.2rem)] font-semibold mt-1 ceo-sub">Founder & CEO, Athera AI (Age: 17)</p>
                 <blockquote className="mt-4 md:mt-6 border-l-4 border-cyan-500 pl-4 italic text-gray-300 text-sm md:text-base">
                   "Intelligence shouldn't belong to machines alone. It should empower humanity. Athera AI is my vision of a world where technology becomes a companion, a guide, and a generator of limitless possibilities."
                 </blockquote>

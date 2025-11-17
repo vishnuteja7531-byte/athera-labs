@@ -18,7 +18,7 @@ const features = [
 const FeatureCard: React.FC<{ title: string; index: number }> = ({ title, index }) => {
   return (
     <div 
-      className="group p-3 md:p-4 rounded-xl glass-morphism transition-all duration-500 ease-out transform-gpu"
+      className="group p-3 md:p-4 rounded-xl glass-morphism transition-all duration-500 ease-out transform-gpu card"
       style={{
         transformStyle: 'preserve-3d',
         perspective: '1000px',
@@ -42,7 +42,7 @@ const FeaturesSection: React.FC = () => {
           <h2 className="font-orbitron text-2xl md:text-5xl font-bold text-center text-glow mb-8 md:mb-16">
             Core Features
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="cards-group">
             {features.map((feature, index) => (
               <FeatureCard key={index} title={feature} index={index}/>
             ))}
