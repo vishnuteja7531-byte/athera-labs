@@ -44,9 +44,9 @@ const ParticleBackground: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="scroll-container bg-black text-white">
+    <div className="scroll-container bg-black text-white w-full">
       <ParticleBackground />
-      <main className="relative z-10">
+      <main className="relative z-10 w-full">
         <HeroSection />
         <AboutSection />
         <FeaturesSection />
