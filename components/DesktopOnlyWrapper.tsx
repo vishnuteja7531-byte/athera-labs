@@ -16,25 +16,7 @@ const DesktopOnlyWrapper: React.FC = () => {
   // Lazy load all 3D components only on desktop
   return (
     <div className="desktop-only-wrapper">
-      {/* Athera Core 3D */}
-      <section className="py-12 md:py-20 lg:py-32 w-full px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="font-orbitron text-2xl md:text-5xl font-bold text-glow mb-4 md:mb-8 uppercase tracking-wider">
-            The Athera Intelligence Core
-          </h2>
-          <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
-            A revolutionary neural architecture inspired by human cognition. The Athera Core processes information through multi-layered reasoning, contextual awareness, and adaptive learning — delivering intelligence that thinks, evolves, and understands.
-          </p>
-          <div className="flex justify-center items-center core-wrapper h-full">
-            <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl shadow-cyan-500/20 border border-cyan-500/30">
-              {/* The 3D core will be dynamically loaded here */}
-              <div className="w-full h-96 flex items-center justify-center bg-black/30 border border-cyan-500/20 rounded-lg">
-                <p className="text-cyan-400 font-orbitron">3D Core Visualization</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Workflow Card */}
       <section className="py-12 md:py-20 w-full px-4">
@@ -82,28 +64,7 @@ const DesktopOnlyWrapper: React.FC = () => {
         </div>
       </section>
 
-      {/* KPI Cards */}
-      <section className="py-12 md:py-20 w-full px-4">
-        <div className="container mx-auto">
-          <h2 className="font-orbitron text-2xl md:text-4xl font-bold text-glow mb-8 md:mb-12 text-center">
-            Performance Metrics
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Deals Progressed", value: "12", change: "+3" },
-              { title: "Hours Saved", value: "34", change: "+8" },
-              { title: "Errors Averted", value: "3", change: "+1" },
-              { title: "Weekly ROI", value: "$1,200", change: "+$200" }
-            ].map((kpi, index) => (
-              <div key={index} className="bg-black/40 border border-cyan-500/30 rounded-xl p-6 text-center">
-                <h3 className="text-cyan-400 font-bold mb-2">{kpi.title}</h3>
-                <div className="text-3xl font-bold text-white mb-1">{kpi.value}</div>
-                <div className="text-green-400 text-sm">↑ {kpi.change}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
 
     </div>

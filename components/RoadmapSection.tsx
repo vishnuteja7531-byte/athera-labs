@@ -18,7 +18,7 @@ const roadmapData: RoadmapItem[] = [
   {
     phase: 'Phase 2',
     title: 'AI Core Integration',
-    description: 'Integration of the Athera Intelligence Core with advanced reasoning capabilities.',
+    description: 'Integration of the Athera Core with advanced reasoning capabilities.',
     status: 'in-progress'
   },
   {
