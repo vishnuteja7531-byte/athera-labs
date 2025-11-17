@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import FeaturesSection from './FeaturesSection';
@@ -15,9 +15,13 @@ import FounderSection from './FounderSection';
 import DownloadAppSection from './DownloadAppSection';
 import ContactSection from './ContactSection';
 import Navbar from './Navbar';
+import { motion } from 'framer-motion';
 
 const ParticleBackground: React.FC = () => {
-    const particles = Array.from({ length: 50 });
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    
+    // Enhanced particle system with 100 particles
+    const particles = Array.from({ length: 100 });
     
     useEffect(() => {
         const handleScroll = () => {
@@ -32,9 +36,16 @@ const ParticleBackground: React.FC = () => {
             });
         };
         
+        const handleMouseMove = (e: MouseEvent) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+        
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousemove', handleMouseMove);
+        
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
     
@@ -46,30 +57,31 @@ const ParticleBackground: React.FC = () => {
                 <div className="absolute bottom-1/4 right-1/4 w-1/3 h-1/3 bg-gradient-to-tl from-[#0fe6ff]/5 to-transparent rounded-full filter blur-3xl animate-pulse-slow animation-delay-2000"></div>
             </div>
             
-            {/* Medium particles - parallax layer 2 */}
+            {/* Medium particles - parallax layer 2 with mouse interaction */}
             <div className="parallax-element absolute top-0 left-0 w-full h-full" data-depth="0.3">
                 {particles.map((_, i) => (
-                    <div
+                    <motion.div
                         key={i}
                         className="absolute rounded-full bg-cyan-400/30"
                         style={{
-                            width: `${Math.random() * 3 + 1}px`,
-                            height: `${Math.random() * 3 + 1}px`,
+                            width: `${Math.random() * 4 + 1}px`,
+                            height: `${Math.random() * 4 + 1}px`,
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
-                            animation: `move ${Math.random() * 20 + 10}s linear infinite`,
-                            animationDelay: `${Math.random() * -30}s`,
                             opacity: Math.random() * 0.5 + 0.2,
+                            boxShadow: '0 0 10px rgba(15, 230, 255, 0.5)',
                         }}
-                    ></div>
+                        animate={{
+                            x: [0, (Math.random() - 0.5) * 100],
+                            y: [0, (Math.random() - 0.5) * 100],
+                        }}
+                        transition={{
+                            duration: Math.random() * 20 + 10,
+                            repeat: Infinity,
+                            repeatType: 'reverse',
+                        }}
+                    />
                 ))}
-                <style>{`
-                    @keyframes move {
-                        0% { transform: translate(0, 0); }
-                        50% { transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px); }
-                        100% { transform: translate(0, 0); }
-                    }
-                `}</style>
             </div>
             
             {/* Fast foreground elements - parallax layer 3 */}
@@ -83,26 +95,72 @@ const ParticleBackground: React.FC = () => {
 };
 
 const DesktopLayout: React.FC = () => {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorVariant, setCursorVariant] = useState('default');
+  
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    };
+    
+    const handleMouseOver = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button, a, input, .interactive')) {
+        setCursorVariant('enlarge');
+      }
+    };
+    
+    const handleMouseOut = () => {
+      setCursorVariant('default');
+    };
+    
+    window.addEventListener('mousemove', moveCursor);
+    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseout', handleMouseOut);
+    
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+      document.removeEventListener('mouseover', handleMouseOver);
+      document.removeEventListener('mouseout', handleMouseOut);
+    };
+  }, []);
+  
   return (
     <div className="scroll-container bg-black text-white w-full relative">
+      {/* Custom cursor */}
+      <div 
+        className={`custom-cursor ${cursorVariant === 'enlarge' ? 'cursor-enlarge' : ''}`}
+        style={{
+          left: `${cursorPosition.x}px`,
+          top: `${cursorPosition.y}px`,
+          transition: cursorVariant === 'enlarge' ? 'width 0.2s ease, height 0.2s ease' : 'transform 0.1s ease'
+        }}
+      />
+      
       <Navbar />
       <ParticleBackground />
       <main className="relative z-10 w-full pt-16">
-        <HeroSection />
-        <AtheraCore3D />
-        <AboutSection />
-        <FeaturesSection />
-        <CoreSection />
-        <PricingSection />
-        <RoadmapSection />
-        <TestimonialsSection />
-        <MissionVisionSection />
-        <FounderSection />
-        <DownloadAppSection />
-        <TechnologySection />
-        <CeoSection />
-        <ContactSection />
-        <Footer />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <HeroSection />
+          <AtheraCore3D />
+          <AboutSection />
+          <FeaturesSection />
+          <CoreSection />
+          <PricingSection />
+          <RoadmapSection />
+          <TestimonialsSection />
+          <MissionVisionSection />
+          <FounderSection />
+          <DownloadAppSection />
+          <TechnologySection />
+          <CeoSection />
+          <ContactSection />
+          <Footer />
+        </motion.div>
       </main>
     </div>
   );

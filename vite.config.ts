@@ -18,6 +18,17 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          external: [],
+          output: {
+            manualChunks: {
+              three: ['three'],
+              'react-three': ['@react-three/fiber', '@react-three/drei', '@react-three/postprocessing']
+            }
+          }
+        }
       }
     };
 });

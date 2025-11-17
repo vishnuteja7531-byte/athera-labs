@@ -215,6 +215,144 @@
         border-radius: 0.6rem;
         font-weight: 600;
       }
+      
+      /* Desktop Cinematic Enhancements */
+      .hero-title-glow {
+        filter: drop-shadow(0 0 30px rgba(15,230,255,0.5));
+      }
+      
+      .neon-border {
+        border: 1px solid #0FE6FF;
+        box-shadow: 
+          0 0 5px rgba(15,230,255,0.5),
+          0 0 15px rgba(15,230,255,0.3),
+          inset 0 0 5px rgba(15,230,255,0.2);
+      }
+      
+      .neon-glow {
+        box-shadow: 
+          0 0 10px rgba(15,230,255,0.7),
+          0 0 20px rgba(15,230,255,0.5),
+          0 0 30px rgba(15,230,255,0.3);
+      }
+      
+      .neon-button {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #0FE6FF;
+        box-shadow: 
+          0 0 10px rgba(15,230,255,0.5),
+          0 0 20px rgba(15,230,255,0.3);
+        transition: all 0.3s ease;
+      }
+      
+      .neon-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+          0 0 15px rgba(15,230,255,0.8),
+          0 0 30px rgba(15,230,255,0.6);
+      }
+      
+      .neon-button:active {
+        transform: translateY(1px);
+        box-shadow: 
+          0 0 5px rgba(15,230,255,0.5),
+          0 0 15px rgba(15,230,255,0.3);
+      }
+      
+      .shine-sweep::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: 0.5s;
+      }
+      
+      .shine-sweep:hover::before {
+        left: 100%;
+      }
+      
+      .holographic-panel {
+        background: rgba(15, 230, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid;
+        border-image: linear-gradient(45deg, #0FE6FF, #6D00FF, #B0F7FF) 1;
+        box-shadow: 
+          0 0 15px rgba(15,230,255,0.3),
+          0 0 30px rgba(109,0,255,0.2),
+          inset 0 0 10px rgba(176,247,255,0.1);
+      }
+      
+      .glassmorphic-card {
+        background: rgba(15, 230, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(15, 230, 255, 0.2);
+        box-shadow: 
+          0 8px 32px rgba(0,0,0,0.3),
+          0 0 20px rgba(15,230,255,0.2);
+      }
+      
+      .glowing-timeline {
+        position: relative;
+      }
+      
+      .glowing-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, #0FE6FF, #6D00FF, #B0F7FF);
+        box-shadow: 0 0 10px rgba(15,230,255,0.7);
+      }
+      
+      .particle-halo {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(15,230,255,0.3), transparent 70%);
+        filter: blur(5px);
+      }
+      
+      .download-btn:hover {
+        box-shadow: 0 0 25px #0FE6FF;
+        transform: translateY(-4px);
+      }
+      
+      /* Custom cursor for desktop */
+      .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(15, 230, 255, 0.5);
+        box-shadow: 0 0 10px #0FE6FF, 0 0 20px #0FE6FF;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+      }
+      
+      .cursor-trail {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(15, 230, 255, 0.3);
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s ease, height 0.2s ease;
+      }
+      
+      .cursor-enlarge {
+        width: 30px;
+        height: 30px;
+      }
     </style>
   <link rel="stylesheet" href="/index.css">
 </head>
