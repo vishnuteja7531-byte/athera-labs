@@ -428,6 +428,33 @@
           0 0 12px rgba(15,230,255,0.45),
           0 0 25px rgba(15,230,255,0.25);
       }
+      
+      /* Floating Particles */
+      .particle-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+      }
+      
+      .floating-particle {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, #0FE6FF, transparent);
+        animation: 
+          driftX 10s infinite alternate ease-in-out,
+          driftY 12s infinite alternate ease-in-out;
+      }
+      
+      @keyframes driftX {
+        0% { transform: translateX(-40px); }
+        100% { transform: translateX(40px); }
+      }
+      
+      @keyframes driftY {
+        0% { transform: translateY(-40px); }
+        100% { transform: translateY(40px); }
+      }
     </style>
   <link rel="stylesheet" href="/index.css">
 </head>

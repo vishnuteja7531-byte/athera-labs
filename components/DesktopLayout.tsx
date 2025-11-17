@@ -14,6 +14,9 @@ import ContactSection from './ContactSection';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import IntroSequence from './IntroSequence';
+import HologramSidebar from './HologramSidebar';
+import FloatingParticles from './FloatingParticles';
+import AtheraConsole from './AtheraConsole';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -140,6 +143,8 @@ const DesktopLayout: React.FC = () => {
         }}
       />
       
+      <FloatingParticles />
+      <HologramSidebar />
       <Navbar />
       <ParticleBackground />
       <main className="relative z-10 w-full pt-16">
@@ -162,6 +167,7 @@ const DesktopLayout: React.FC = () => {
           <Footer />
         </motion.div>
       </main>
+      <AtheraConsole />
     </div>
   );
 };
