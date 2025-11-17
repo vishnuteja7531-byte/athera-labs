@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Athera AI — The Future of Intelligence</title>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: 'Rajdhani', sans-serif;
+        overflow-x: hidden;
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      .font-rajdhani {
+        font-family: 'Rajdhani', sans-serif;
+      }
+      .glass-morphism {
+        background: rgba(15, 230, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(15, 230, 255, 0.1);
+      }
+      .neon-blue-shadow {
+        box-shadow: 0 0 5px #0fe6ff, 0 0 10px #0fe6ff, 0 0 20px #0fe6ff, 0 0 40px #0fe6ff;
+      }
+      .text-glow {
+        text-shadow: 0 0 5px rgba(15, 230, 255, 0.7), 0 0 10px rgba(15, 230, 255, 0.5);
+      }
+      .silver-glow {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      .scroll-container {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0fe6ff;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5ffbff;
+      }
+      .animate-scanline {
+        animation: scanline 8s linear infinite;
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+      }
+      .animate-pulse-slow {
+        animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+       }
+      @keyframes pulse-slow {
+        0%, 100% {
+          opacity: 0.5;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.02);
+        }
+      }
+      .animate-border-flow {
+        position: relative;
+        overflow: hidden;
+      }
+      .animate-border-flow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #0fe6ff, transparent);
+        animation: border-flow-top 5s linear infinite;
+      }
+      @keyframes border-flow-top {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+      .ceo-photo {
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         object-fit: cover;
+         border: 3px solid #0FE6FF;
+         box-shadow:
+           0 0 15px rgba(15,230,255,0.9),
+           0 0 35px rgba(15,230,255,0.6),
+           0 0 55px rgba(15,230,255,0.35);
+         display: block;
+         margin: 0 auto 20px auto;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
