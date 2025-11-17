@@ -41,6 +41,12 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a 
+              href="/athera-lore" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium athera-link"
+            >
+              Lore
+            </a>
+            <a 
               href="https://www.instagram.com/athera.labs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -84,6 +90,13 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </a>
               ))}
+              <a 
+                href="/athera-lore" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium py-2 athera-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Lore
+              </a>
               <a 
                 href="https://www.instagram.com/athera.labs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                 target="_blank" 

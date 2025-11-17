@@ -22,6 +22,10 @@ import AtheraQuantumCore from './AtheraQuantumCore';
 import AtheraRealm from './AtheraRealm';
 import AtheraAbilitiesCarousel from './AtheraAbilitiesCarousel';
 import AtheraSuperGrid from './AtheraSuperGrid';
+import AtheraHologramFace from './AtheraHologramFace';
+import AtheraTransitions from './AtheraTransitions';
+import AtheraEmotionEngine from './AtheraEmotionEngine';
+import AtheraArrivalIntro from './AtheraArrivalIntro';
 
 import '../styles/3d-templates.css';
 import '../styles/preAthera.css';
@@ -29,6 +33,10 @@ import '../styles/quantumCore.css';
 import '../styles/realm.css';
 import '../styles/carousel.css';
 import '../styles/superGrid.css';
+import '../styles/hologramFace.css';
+import '../styles/transitions.css';
+import '../styles/emotionEngine.css';
+import '../styles/arrivalIntro.css';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -184,6 +192,10 @@ const DesktopLayout: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
+          <AtheraArrivalIntro />
+          <AtheraHologramFace />
+          <AtheraEmotionEngine />
+          <AtheraTransitions />
           <HeroSection />
           <AtheraRealm />
           <AtheraQuantumCore />

@@ -1,0 +1,149 @@
+.hologram-face-container {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.hologram-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.hologram-face.breathing {
+  animation: breath 4s infinite ease-in-out;
+}
+
+@keyframes breath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.face-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  z-index: 2;
+  transition: box-shadow 0.3s ease;
+}
+
+.eye.left {
+  top: 70px;
+  left: 60px;
+}
+
+.eye.right {
+  top: 70px;
+  right: 60px;
+}
+
+.eye.bright {
+  box-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;
+}
+
+.contour-line {
+  position: absolute;
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.jaw-line {
+  width: 80px;
+  height: 2px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cheek-line {
+  width: 40px;
+  height: 2px;
+  top: 90px;
+}
+
+.cheek-line.left {
+  left: 30px;
+}
+
+.cheek-line.right {
+  right: 30px;
+}
+
+.scanline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #0ff;
+  box-shadow: 0 0 5px #0ff;
+  z-index: 1;
+}
+
+.particle.drifting {
+  animation: drift 2s ease-out forwards;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx, 0), var(--dy, 0));
+    opacity: 0;
+  }
+}
+
+.face-label {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+  white-space: nowrap;
+}
