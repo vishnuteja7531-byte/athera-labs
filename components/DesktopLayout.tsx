@@ -17,7 +17,9 @@ import IntroSequence from './IntroSequence';
 import FloatingParticles from './FloatingParticles';
 import VoiceIntro from './VoiceIntro';
 import DesktopOnlyWrapper from './DesktopOnlyWrapper';
+import PreAtheraShowcase from './PreAtheraShowcase';
 import '../styles/3d-templates.css';
+import '../styles/preAthera.css';
 
 const ParticleBackground: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -174,6 +176,7 @@ const DesktopLayout: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <HeroSection />
+          <PreAtheraShowcase />
           <DesktopOnlyWrapper />
           <AboutSection />
           <FeaturesSection />
