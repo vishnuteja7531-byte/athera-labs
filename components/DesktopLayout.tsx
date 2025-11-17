@@ -22,7 +22,6 @@ import AtheraQuantumCore from './AtheraQuantumCore';
 import AtheraRealm from './AtheraRealm';
 import AtheraAbilitiesCarousel from './AtheraAbilitiesCarousel';
 import AtheraSuperGrid from './AtheraSuperGrid';
-import AtheraHologramFace from './AtheraHologramFace';
 import AtheraTransitions from './AtheraTransitions';
 import AtheraEmotionEngine from './AtheraEmotionEngine';
 import AtheraArrivalIntro from './AtheraArrivalIntro';
@@ -33,7 +32,6 @@ import '../styles/quantumCore.css';
 import '../styles/realm.css';
 import '../styles/carousel.css';
 import '../styles/superGrid.css';
-import '../styles/hologramFace.css';
 import '../styles/transitions.css';
 import '../styles/emotionEngine.css';
 import '../styles/arrivalIntro.css';
@@ -193,7 +191,6 @@ const DesktopLayout: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <AtheraArrivalIntro />
-          <AtheraHologramFace />
           <AtheraEmotionEngine />
           <AtheraTransitions />
           <HeroSection />

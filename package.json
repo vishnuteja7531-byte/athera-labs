@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "push": "git add . && git commit -m \"Auto-update from Qoder\" && git push"
+    "push": "git add . && git commit -m \"Auto-update from Qoder\" && git push",
+    "clean": "if exist .next rmdir /s /q .next && if exist dist rmdir /s /q dist && if exist build rmdir /s /q build && if exist .vite rmdir /s /q .vite && echo cache cleared"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
