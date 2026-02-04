@@ -17,8 +17,12 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+<<<<<<< HEAD
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx']
+=======
+        }
+>>>>>>> origin/main
       },
       build: {
         rollupOptions: {

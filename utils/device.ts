@@ -1,6 +1,7 @@
 export function isMobileDevice() {
   if (typeof window === "undefined") return false;
   return window.innerWidth < 768;
+<<<<<<< HEAD
 }
 
 export function isTabletDevice() {
@@ -37,4 +38,6 @@ export function hasGood3DPerformance() {
   const deviceRAM = navigator.deviceMemory || 4; // fallback to 4GB
   
   return hasWebGL && deviceRAM >= 2; // Need at least 2GB RAM and WebGL support
+=======
+>>>>>>> origin/main
 }

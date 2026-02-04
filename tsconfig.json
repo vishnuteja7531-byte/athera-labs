@@ -11,9 +11,13 @@
     ],
     "skipLibCheck": true,
     "types": [
+<<<<<<< HEAD
       "node",
       "react",
       "react-dom"
+=======
+      "node"
+>>>>>>> origin/main
     ],
     "moduleResolution": "bundler",
     "isolatedModules": true,

@@ -1,7 +1,11 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+<<<<<<< HEAD
 import App from './App.jsx';
+=======
+import App from './App';
+>>>>>>> origin/main
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

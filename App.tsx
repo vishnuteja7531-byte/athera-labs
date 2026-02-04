@@ -1,10 +1,17 @@
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import { isMobileDevice } from './utils/device';
 import DesktopLayout from './components/DesktopLayout';
 import MobileLayout from './components/MobileLayout.jsx';
 import './styles/mobile.css';
+=======
+import React, { useState, useEffect } from 'react';
+import { isMobileDevice } from './utils/device';
+import DesktopLayout from './components/DesktopLayout';
+import MobileLayout from './components/MobileLayout';
+>>>>>>> origin/main
 
 const App: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import HeroSection from './HeroSection';
+<<<<<<< HEAD
 import OptimizedHeroSection from './OptimizedHeroSection.jsx';
+=======
+>>>>>>> origin/main
 import AboutSection from './AboutSection';
 import FeaturesSection from './FeaturesSection';
 import CoreSection from './CoreSection';
