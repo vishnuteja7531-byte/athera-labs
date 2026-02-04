@@ -1,0 +1,41 @@
+/* 3D Templates CSS */
+
+.desktop-only-wrapper {
+  width: 100%;
+}
+
+.core-wrapper {
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .core-wrapper {
+    max-width: 680px;
+    height: 520px;
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 5px rgba(15, 230, 255, 0.7), 0 0 10px rgba(15, 230, 255, 0.5);
+}
+
+.custom-cursor {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #0FE6FF;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.cursor-enlarge {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: rgba(15, 230, 255, 0.1);
+}

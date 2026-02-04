@@ -1,0 +1,60 @@
+.preAthera-wrapper {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.preAthera-title {
+  font-size: 52px;
+  color: #0ff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 18px #0ff;
+  margin-bottom: 18px;
+}
+
+.preAthera-subtitle {
+  font-size: 18px;
+  color: #9beaff;
+  width: 70%;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.preAthera-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 32px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.preAthera-card {
+  width: 320px;
+  height: 270px;
+  border-radius: 18px;
+  padding: 24px;
+  background: rgba(0, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.preAthera-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #0ff;
+  box-shadow: 0 0 35px rgba(0,255,255,0.5);
+}
+
+.preAthera-card h3 {
+  font-size: 22px;
+  color: #0ff;
+  margin-bottom: 12px;
+}
+
+.preAthera-card p {
+  font-size: 15px;
+  color: #cff;
+  line-height: 1.4;
+}

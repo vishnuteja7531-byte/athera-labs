@@ -1,0 +1,195 @@
+.athera-cinematic-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.athera-cinematic-intro.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+.particle-storm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.light-streak {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0ff, transparent);
+  box-shadow: 0 0 10px #0ff;
+  transform-origin: left center;
+  opacity: 0;
+}
+
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.letter {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: transparent;
+  margin: 0 10px;
+  position: relative;
+  text-shadow: 0 0 10px rgba(15, 230, 255, 0.5);
+  opacity: 0;
+}
+
+.letter.assembled {
+  color: #0ff;
+  text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+.letter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(15, 230, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.letter.shine::before {
+  animation: shineSweep 1s ease;
+}
+
+.neon-line {
+  position: absolute;
+  background: #0ff;
+  box-shadow: 0 0 10px #0ff;
+  opacity: 0;
+}
+
+.neon-line.horizontal {
+  width: 0;
+  height: 2px;
+}
+
+.neon-line.vertical {
+  width: 2px;
+  height: 0;
+}
+
+.shockwave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 2px solid #0ff;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.final-logo-container {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.final-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
+  color: #0ff;
+  text-shadow: 0 0 15px #0ff;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.final-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  color: #0ff;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(15, 230, 255, 0.5);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  100% {
+    text-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;
+  }
+}
+
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.radial-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 230, 255, 0.8) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.distortion-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(15, 230, 255, 0.5);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
