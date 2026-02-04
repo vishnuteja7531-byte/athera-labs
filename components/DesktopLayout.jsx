@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import OptimizedHeroSection from './OptimizedHeroSection.jsx';
+import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import FeaturesSection from './FeaturesSection';
 import CoreSection from './CoreSection';
@@ -195,7 +195,7 @@ const DesktopLayout = () => {
           <AtheraArrivalIntro />
           <AtheraEmotionEngine />
           <AtheraTransitions />
-          <OptimizedHeroSection />
+          <HeroSection />
           <AtheraRealm />
           <AtheraQuantumCore />
           <AtheraAbilitiesCarousel />
