@@ -1,7 +1,6 @@
 export function isMobileDevice() {
   if (typeof window === "undefined") return false;
   return window.innerWidth < 768;
-<<<<<<< HEAD
 }
 
 export function isTabletDevice() {
@@ -26,7 +25,7 @@ export function hasGood3DPerformance() {
   const hasWebGL = (() => {
     try {
       const canvas = document.createElement('canvas');
-      return !!window.WebGLRenderingContext && 
+      return !!(window as any).WebGLRenderingContext && 
              (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
     } catch (e) {
       return false;
@@ -35,9 +34,7 @@ export function hasGood3DPerformance() {
   
   // Basic device RAM check (approximate)
   // @ts-ignore
-  const deviceRAM = navigator.deviceMemory || 4; // fallback to 4GB
+  const deviceRAM = (navigator as any).deviceMemory || 4; // fallback to 4GB
   
   return hasWebGL && deviceRAM >= 2; // Need at least 2GB RAM and WebGL support
-=======
->>>>>>> origin/main
 }
